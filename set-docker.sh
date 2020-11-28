@@ -1,6 +1,10 @@
+echo #######
+echo Start Work
 sudo cat <<EOF> /etc/docker/daemon.json
 {
     "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]
 }
-<EOF>
+EOF
 sudo systemctl restart docker.service
+
+echo End
